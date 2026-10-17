@@ -1,0 +1,19 @@
+# Secret keys & environment variables
+.env
+*.env
+*.pem
+
+# Python temporary files
+__pycache__/
+*.pyc
+venv/
+.venv/
+
+# Node & React build directories
+node_modules/
+dist/
+build/
+
+# System junk
+.DS_Store
+Thumbs.db
