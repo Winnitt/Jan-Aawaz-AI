@@ -40,7 +40,7 @@
 
 ---
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 * **Frontend:** React, Vite, Tailwind CSS, Leaflet Maps
 * **Hosting:** Firebase Hosting
@@ -51,6 +51,6 @@
 
 ---
 
-## 🛡️ License
+##  License
 
 This project is licensed under the MIT License — see the [LICENSE](LICENSE) file for details.
