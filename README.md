@@ -4,7 +4,7 @@
 
 ---
 
-## Key Features
+##  Key Features
 
 * **Multilingual Input & AI Translation:** Ingests grievances in regional languages and automatically translates them into clear English executive summaries.
 * **Intelligent Auto-Triage:** Uses **Gemini 2.5 Flash** to extract grievance category (*Roads & Potholes, Water Supply, Garbage, Electricity*), urgency rating (*Critical, High, Medium, Low*), and citizen sentiment tone.
@@ -14,28 +14,29 @@
 
 ---
 
-## System Architecture
+##  System Architecture
 
+```text
 +-----------------------+
-                              |   Citizen Portal UI   |
-                              |  (Firebase Hosting)   |
-                              +-----------+-----------+
-                                          |
-                                  HTTP / REST API
-                                          |
-                                          v
-                              +-----------------------+
-                              | FastAPI Backend Engine|
-                              |   (Cloud Run Service) |
-                              +----+-------------+----+
-                                   |             |
-                    Google GenAI   |             |  Data Persistence
-                        SDK Call   v             v  (Native Mode)
-                +--------------------+         +--------------------+
-                |  Gemini 2.5 Flash  |         |  Google Cloud      |
-                |  Structured JSON   |         |  Firestore DB      |
-                +--------------------+         +--------------------+
-
+|   Citizen Portal UI   |
+|  (Firebase Hosting)   |
++-----------+-----------+
+            |
+    HTTP / REST API
+            |
+            v
++-----------------------+
+| FastAPI Backend Engine|
+|   (Cloud Run Service) |
++----+-------------+----+
+     |             |
+     |             |  Data Persistence
+  v  |             v  (Native Mode)
++----+---------------+ +--------------------+
+|  Gemini 2.5 Flash  | |  Google Cloud      |
+|  Structured JSON   | |  Firestore DB      |
++--------------------+ +--------------------+
+```
 
 ---
 
@@ -50,9 +51,6 @@
 
 ---
 
+## 🛡️ License
 
-
-
-
-
-                
+This project is licensed under the MIT License — see the [LICENSE](LICENSE) file for details.
